@@ -28,7 +28,7 @@
 #include <mpi.h>
 
 // profiler
-#include "Profiler.h"
+// #include "Profiler.h"
 
 // LAMMPS include files
 #include "library.h"         
@@ -129,8 +129,8 @@ int main(int argc, char **argv)
   MPI_Comm sim_comm = MPI_COMM_WORLD;
   MPI_Comm_rank(sim_comm, &globalInfo.me);
 	
-  // initialize profiler
-  sensei::Profiler::Initialize();
+//   // initialize profiler
+//   sensei::Profiler::Initialize();
 
   // Initialize SENSEI bridge 
   lammpsBridge::Initialize(sim_comm, sensei_xml );
