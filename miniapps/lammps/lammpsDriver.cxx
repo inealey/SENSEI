@@ -182,7 +182,7 @@ int main(int argc, char **argv)
     }
 
   // Setup the fix external callback
-  int ifix = lammps->modify->find_fix_by_style("external");
+  int ifix = lammps->modify->get_fix_by_style("external");
 	
   // If there's no external fix, abort
   if (ifix == -1) 
