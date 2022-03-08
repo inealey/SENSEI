@@ -40,6 +40,10 @@
 
 // SENSEI bridge 
 #include "lammpsBridge.h"   
+// SENSEI profiler
+#include "Profiler.h"
+
+
 
 using namespace LAMMPS_NS;
 
@@ -131,6 +135,9 @@ int main(int argc, char **argv)
 	
 //   // initialize profiler
 //   sensei::Profiler::Initialize();
+
+  // Initialize SENSEI profiler
+  sensei::Profiler::Initialize();
 
   // Initialize SENSEI bridge 
   lammpsBridge::Initialize(sim_comm, sensei_xml );
